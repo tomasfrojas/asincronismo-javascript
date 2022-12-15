@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "callback": "node src/callback/challenge.js"
+    "callback": "node src/callback/challenge.js",
+    "async": "node src/async/challenge.js"
   },
   "repository": {
     "type": "git",
