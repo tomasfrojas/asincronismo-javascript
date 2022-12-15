@@ -44,7 +44,7 @@ fetchData(`${API}/products`, function (error1, data1) {
     //si en este punto se identifica un error se imprime en consola y se detiene el proceso
     if (error2) return console.error(error2);
     //Se invoca nuevamente la funcion fetchData con el fin de acceder a la categoria, se envían como parametros la url de la API con la concatenación de 'Categories' y el atributo Id de categoria del objeto data2 de la función anterior
-    //en este caso puntual se hace uso de Optional Caining el cual hace una evalucación de las propiedades de un objeto y en vez de arrojar un error devuelve undefined en caso que la propiedad no exista o sea null.
+    //en este caso puntual se hace uso de Optional Caining el cual hace una evaluación de las propiedades de un objeto y en vez de arrojar un error devuelve undefined en caso que la propiedad no exista o sea null.
     //igual que las anteriores e envia una funcion anonima con 2 argumentos, un objeto Error y un objeto de datos
     fetchData(
       `${API}/categories/${data2?.category?.id}`,
@@ -53,9 +53,9 @@ fetchData(`${API}/products`, function (error1, data1) {
         if (error3) return console.error(error3);
         //Se imprime el objeto en la posición 1 del arreglo de los objetos obtenidos en el metodo invocado inicialmente
         console.log(data1[0]);
-        //Se imprime el titulo del objeto que se consultó en la seguna invocación de la función
+        //Se imprime el titulo del objeto que se consultó en la segunda invocación de la función
         console.log(data2.title);
-        //Se imprime el nombre de la categoria a la que pertenece el objeto que se consultó en la seguna invocación del método.
+        //Se imprime el nombre de la categoria a la que pertenece el objeto que se consultó en la segunda invocación del método.
         console.log(data3.name);
       }
     );
